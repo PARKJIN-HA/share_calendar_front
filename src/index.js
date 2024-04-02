@@ -1,31 +1,16 @@
-import _ from 'lodash';
-import './style.css';
-import Icon from './icon.png';
-import printMe from './print.js';
+import React from 'react';
+import {createRoot} from 'react-dom/client';
 
+const App = () => {
+  return (
+    <div>
+      <h1>Hello, World!</h1>
+    </div>
+  );
+}
+export default App;
 
-function component() {
-    const element = document.createElement('div');
-    const btn = document.createElement('button');
+const domNode = document.getElementById('root');
+const root = createRoot(domNode);
 
-  
-    // - Lodash, currently included via a script, is required for this line to work
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
-
-    // Add the image to our existing div.
-    const myIcon = new Image();
-    myIcon.src = Icon;
-    btn.innerHTML = 'Click me and check the console!';
-    btn.onclick = printMe;
-
-    
-    element.appendChild(myIcon);
-   
-  
-    element.appendChild(btn);
-    return element;
-  }
-  
-  document.body.appendChild(component());
+root.render(<App />);
