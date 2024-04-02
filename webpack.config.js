@@ -1,13 +1,19 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
   entry:'./src/index.js',
-  devtool: 'inline-source-map',
+  devtool: 'eval-cheap-module-source-map',
   devServer: {
     static: './dist',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+    alias: {
+      '@': path.resolve(__dirname, 'src/'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -28,12 +34,7 @@ module.exports = {
   optimization:{
     runtimeChunk: 'single',
   },
-  resolve: {
-    extensions: ['.js', '.jsx', '.json'],
-    alias: {
-      '@': path.resolve(__dirname, 'src/'),
-    },
-  },
+  
   module: {
     rules: [
       {
