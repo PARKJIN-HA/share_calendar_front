@@ -291,6 +291,7 @@
     "strip-ansi": "^6.0.1",
     "strip-ansi-cjs": "^6.0.1",
     "strip-final-newline": "^2.0.0",
+    "styled-components": "^6.1.8",
     "supports-color": "^8.1.1",
     "supports-preserve-symlinks-flag": "^1.0.0",
     "tapable": "^2.2.1",
