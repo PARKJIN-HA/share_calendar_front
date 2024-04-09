@@ -7,6 +7,7 @@ module.exports = {
   entry:'./src/index.js',
   devtool: 'eval-cheap-module-source-map',
   devServer: {
+    historyApiFallback: true,
     static: './dist',
   },
   resolve: {
@@ -16,6 +17,8 @@ module.exports = {
       '@pages': path.resolve(__dirname, 'src/pages/'),
       '@assets': path.resolve(__dirname, 'src/assets/'),
       '@components': path.resolve(__dirname, 'src/components/'),
+      '@utils': path.resolve(__dirname, 'src/utils/'),
+      '@sidebar': path.resolve(__dirname, 'src/component/sidebar/'),
     },
   },
   plugins: [
