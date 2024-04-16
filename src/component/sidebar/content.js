@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import GroupName from '@sidebar/sideheader';
+import ProfileBox from '@sidebar/profile/box';
 
 const SidebarContainer = styled.div`
   width: 400px;
@@ -12,11 +13,11 @@ const SidebarContainer = styled.div`
   background-color: #C3CEE1;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 `;
 
 const MenuBox = styled.div`
   width: 100%;
-  overflow: auto; // 메뉴 아이템이 많아질 경우 스크롤 가능하도록 설정
   background-color: #C3CEE1;
   display: flex;
   flex-direction: column; // 아이템들을 세로로 정렬 
@@ -45,14 +46,15 @@ const MenuItem = styled.button`
 const MenuContent = ({toggleSidebar}) => {
   return (
     <SidebarContainer>
-      <GroupName toggleSidebar={toggleSidebar}/> {/* 여기에 GroupName을 포함시킵니다. */}
       <MenuBox>
+      <GroupName toggleSidebar={toggleSidebar}/> {/* 여기에 GroupName을 포함시킵니다. */}
         <MenuItem>HOME</MenuItem>
         <MenuItem>Calendar</MenuItem>
         <MenuItem>Gantt</MenuItem>
         <MenuItem>To-Do</MenuItem>
         {/* 추가 메뉴 아이템 */}
       </MenuBox>
+      <ProfileBox />
     </SidebarContainer>
   );
 };

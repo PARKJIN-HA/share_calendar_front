@@ -19,6 +19,7 @@ module.exports = {
       '@components': path.resolve(__dirname, 'src/components/'),
       '@utils': path.resolve(__dirname, 'src/utils/'),
       '@sidebar': path.resolve(__dirname, 'src/component/sidebar/'),
+      '@sidebar/profile': path.resolve(__dirname, 'src/component/sidebar/profile/'),
     },
   },
   plugins: [
