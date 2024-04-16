@@ -1,13 +1,22 @@
 // src/component/Sidebar/MenuContent.js
 import React from 'react';
 import styled from 'styled-components';
+import GroupName from '@sidebar/sideheader';
 
-const MenuBox = styled.div`
-  width: 400px; // 메뉴 전체의 너비
+const SidebarContainer = styled.div`
+  width: 400px;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  background-color: #C3CEE1;
+  display: flex;
+  flex-direction: column;
+`;
+
+const MenuBox = styled.div`
+  width: 100%;
+  overflow: auto; // 메뉴 아이템이 많아질 경우 스크롤 가능하도록 설정
   background-color: #C3CEE1;
   display: flex;
   flex-direction: column; // 아이템들을 세로로 정렬 
@@ -33,16 +42,20 @@ const MenuItem = styled.button`
   }
 `;
 
-const MenuContent = () => {
+const MenuContent = ({toggleSidebar}) => {
   return (
-    <MenuBox>
-      <MenuItem>HOME</MenuItem>
-      <MenuItem>Calendar</MenuItem>
-      <MenuItem>Gantt</MenuItem>
-      <MenuItem>To-Do</MenuItem>
-      {/* 메뉴 아이템 추가 */}
-    </MenuBox>
+    <SidebarContainer>
+      <GroupName toggleSidebar={toggleSidebar}/> {/* 여기에 GroupName을 포함시킵니다. */}
+      <MenuBox>
+        <MenuItem>HOME</MenuItem>
+        <MenuItem>Calendar</MenuItem>
+        <MenuItem>Gantt</MenuItem>
+        <MenuItem>To-Do</MenuItem>
+        {/* 추가 메뉴 아이템 */}
+      </MenuBox>
+    </SidebarContainer>
   );
 };
+
 
 export default MenuContent;

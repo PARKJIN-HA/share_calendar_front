@@ -5,11 +5,15 @@ import MenuIcon from '@sidebar/icon';
 import MenuContent from '@sidebar/content';
 
 const SidebarContainer = styled.div`
-  margin: 0%;
-  padding: 0%;
-  width: 100px;
+  position: relative;
+  top: -1vh;
+  left: -1vh;
+  width: 7vh;
+  height: 100vh;
   transition: width 0.3s ease-in-out;
-  background-color: #8e9fbb;
+  background-color: #C3CEE1;
+  display: flex;
+  justify-content: center;
   /* SidebarContainer에 대한 나머지 스타일 */
 `;
 
@@ -38,7 +42,7 @@ const Sidebar = () => {
 
   return (
     <SidebarContainer ref={sidebarRef} isOpen={isOpen}>
-      {isOpen ? <MenuContent /> : <MenuIcon toggleSidebar={toggleSidebar} />}
+      {isOpen ? <MenuContent toggleSidebar={toggleSidebar} /> : <MenuIcon toggleSidebar={toggleSidebar} />}
     </SidebarContainer>
   );
 };
