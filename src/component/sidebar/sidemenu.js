@@ -6,8 +6,8 @@ import MenuContent from '@sidebar/content';
 
 const SidebarContainer = styled.div`
   position: relative;
-  top: -1vh;
-  left: -1vh;
+  top: 0vh;
+  left: 0vh;
   width: 7vh;
   height: 100dvh;
   transition: width 0.3s ease-in-out;

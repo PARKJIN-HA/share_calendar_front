@@ -48,7 +48,7 @@ const MenuContent = ({toggleSidebar}) => {
     <SidebarContainer>
       <MenuBox>
       <GroupName toggleSidebar={toggleSidebar}/> {/* 여기에 GroupName을 포함시킵니다. */}
-        <MenuItem>HOME</MenuItem>
+        <MenuItem>Home</MenuItem>
         <MenuItem>Calendar</MenuItem>
         <MenuItem>Gantt</MenuItem>
         <MenuItem>To-Do</MenuItem>
