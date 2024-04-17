@@ -16,7 +16,7 @@ module.exports = {
       '@': path.resolve(__dirname, 'src/'),
       '@pages': path.resolve(__dirname, 'src/pages/'),
       '@assets': path.resolve(__dirname, 'src/assets/'),
-      '@components': path.resolve(__dirname, 'src/components/'),
+      '@component': path.resolve(__dirname, 'src/component/'),
       '@utils': path.resolve(__dirname, 'src/utils/'),
       '@sidebar': path.resolve(__dirname, 'src/component/sidebar/'),
       '@sidebar/profile': path.resolve(__dirname, 'src/component/sidebar/profile/'),
